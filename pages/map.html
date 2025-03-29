@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map | Welcome Booklet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+</head>
+<body>
+    <header class="page-header">
+        <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span class="sr-only">Back</span>
+        </a>
+        <h1>Map</h1>
+    </header>
+
+    <div class="page-container">
+        <main class="page-content">
+            <section class="content-section">
+                <h2>Area Map</h2>
+                <p>Explore the surrounding area and find important locations easily.</p>
+            </section>
+
+            <section class="map-container">
+                <div id="map" class="interactive-map">
+                    <!-- Map will be loaded here via JavaScript -->
+                    <div class="map-loading">
+                        <p>Loading map...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Points of Interest</h2>
+                <div class="poi-list">
+                    <div class="poi-item" data-lat="43.5" data-lng="6.5">
+                        <div class="poi-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Your Accommodation</h4>
+                            <p>Your current location</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.51" data-lng="6.51">
+                        <div class="poi-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>La Belle Vue Restaurant</h4>
+                            <p>1.2 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.49" data-lng="6.505">
+                        <div class="poi-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Café Soleil</h4>
+                            <p>0.4 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.495" data-lng="6.51">
+                        <div class="poi-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Beach</h4>
+                            <p>0.5 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.52" data-lng="6.48">
+                        <div class="poi-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Mountain Hiking Trail</h4>
+                            <p>5 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.48" data-lng="6.47">
+                        <div class="poi-icon">
+                            <i class="fas fa-wine-glass-alt"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Local Vineyard</h4>
+                            <p>8 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.505" data-lng="6.52">
+                        <div class="poi-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Super Marché</h4>
+                            <p>1.5 km away</p>
+                        </div>
+                    </div>
+                    <div class="poi-item" data-lat="43.502" data-lng="6.495">
+                        <div class="poi-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="poi-info">
+                            <h4>Local Market</h4>
+                            <p>0.8 km away</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Getting Around</h2>
+                <div class="transportation-info">
+                    <div class="transport-item">
+                        <h4><i class="fas fa-bus"></i> Public Transportation</h4>
+                        <p>The nearest bus stop is 200m away. Bus lines 10 and 12 connect to the city center.</p>
+                        <p>Schedule: Every 30 minutes from 6:00 AM to 10:00 PM</p>
+                    </div>
+                    <div class="transport-item">
+                        <h4><i class="fas fa-taxi"></i> Taxi Services</h4>
+                        <p>Local taxis are available 24/7.</p>
+                        <a href="tel:+33412345680" class="transport-contact">Call Taxi: +33 4 12 34 56 80</a>
+                    </div>
+                    <div class="transport-item">
+                        <h4><i class="fas fa-bicycle"></i> Bike Rental</h4>
+                        <p>Rent bikes from the local shop to explore the area.</p>
+                        <p>Location: 42 Avenue de la Plage (0.3 km away)</p>
+                        <a href="tel:+33412345681" class="transport-contact">Contact: +33 4 12 34 56 81</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+    </div>
+
+    <footer class="page-footer">
+        <div class="host-info">
+            <h3>Host Contacts</h3>
+            <a href="tel:+3364024" class="contact-link" target="_blank">
+                <i class="fas fa-envelope"></i> Mail
+            </a>
+            <a href="https://wa.me/33634402480" class="contact-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/real_estate_0304/" class="contact-link" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@mmmarouan" class="contact-link" target="_blank">
+                <i class="fab fa-tiktok"></i> Instagram
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
